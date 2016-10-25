@@ -5,8 +5,7 @@ namespace GitTests {
 	public class MyClass {
 		
 		public static void Sum(int[] numbers) {
-			Console.WriteLine("Summing with {0} number(s).", numbers.Count);
-			Console.WriteLine("Called from within MyClass.");
+			LogMessages();
 			
 			int result = 0;
 			foreach (int number in numbers) {
@@ -14,6 +13,12 @@ namespace GitTests {
 			}
 			return result;
 		}
-		
+
+
+		private static void LogMessages()
+		{
+			Console.WriteLine("Summing with {0} number(s).", numbers.Count);
+			Console.WriteLine("Called from within MyClass.");
+		}
 	}
 }
